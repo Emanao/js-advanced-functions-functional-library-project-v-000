@@ -110,6 +110,7 @@ const fi = (function() {
       console.log("Fnc exit: "+newAryOfObjs)
 
       if(newAryOfObjs.length>0) this.uniq(newAryOfObjs,isSorted, cb, uniqValues);
+      console.log(uniqValues);
       return uniqValues;
     },
 
