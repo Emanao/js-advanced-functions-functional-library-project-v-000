@@ -104,14 +104,15 @@ const fi = (function() {
       console.log(newAryOfObjs);
 
       uniqValues.push(newAryOfObjs.shift());
+      console.log("uniqValues - Fnc exit: ");
+      console.log(+uniqValues);
+
       newAryOfObjs = this.filter(newAryOfObjs, elem=>Object.values(this.last(uniqValues))[0] !== Object.values(elem)[0] )
 
       console.log("newAryOfObjs - Fnc exit");
       console.log(newAryOfObjs);
 
       if(newAryOfObjs.length>0) this.uniq(newAryOfObjs,isSorted, cb, uniqValues);
-      console.log("uniqValues - Fnc exit: ");
-      console.log(+uniqValues);
       return uniqValues;
     },
 
