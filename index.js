@@ -100,7 +100,7 @@ const fi = (function() {
       newAryOfObjs = this.filter(newAryOfObjs, elem=>Object.values(this.last(uniqValues))[0] !== Object.values(elem)[0] )
       console.log(newAryOfObjs)
 
-      if(newAryOfObjs.length>0) this.uniq(newAryOfObjs),false, cb, uniqValues);
+      if(newAryOfObjs.length>0) this.uniq(newAryOfObjs,isSorted, cb, uniqValues);
        return uniqValues;
     },
 
