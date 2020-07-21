@@ -95,12 +95,13 @@ const fi = (function() {
         return !!cb?{[elem]:cb(elem)}:{[id]:elem}
       })
       newAry.forEach(elem=>console.log(elem));
+      console.log(newAry)
       // uniqValues.push(newAry.shift());
       // for (const [id,elem] of newAry.entries()){
       //   if (this.last(uniqValues) === elem) delete newAry[id];
       // }
       // if(this.compact(newAry).length>0) this.uniq(this.compact(newAry),false, cb, uniqValues);
-      return newAry;
+      // return newAry;
     },
 
 
