@@ -100,20 +100,12 @@ const fi = (function() {
       else{
         newAryOfObjs = array;
       }
-      console.log("newAryOfObjs - Fnc entry: ");
-      console.log(newAryOfObjs);
 
       uniqValues.push(newAryOfObjs.shift());
-      console.log("uniqValues - Fnc exit: ");
-      console.log(uniqValues);
-
       newAryOfObjs = this.filter(newAryOfObjs, elem=>Object.values(this.last(uniqValues))[0] !== Object.values(elem)[0] )
 
-      console.log("filtered newAryOfObjs - Fnc exit");
-      console.log(newAryOfObjs);
-
       if(newAryOfObjs.length>0) this.uniq(newAryOfObjs,isSorted, cb, uniqValues);
-      return uniqValues;
+      return !!cb? this.map(uniqValues, elem=>Object.keys(elem)).flat():this.map(uniqValues, elem=>Object.values(elem)).flat()
     },
 
 
