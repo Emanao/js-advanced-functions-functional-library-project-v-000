@@ -15,11 +15,11 @@ const fi = (function() {
     },
 
     map: function(collection, cb) {
-      const keys = Object.keys(collection);
+      const entries = Object.entries(collection);
       const collectionCopy = [];
 
-      for(const key of keys){
-        collectionCopy.push(cb(collection[key],key,collection));
+      for(const [key,val] of entries){
+        collectionCopy.push(cb(val,key,collection));
       }
 
       return collectionCopy;
