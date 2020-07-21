@@ -91,7 +91,10 @@ const fi = (function() {
     },
 
     uniq: function(array, isSorted, cb, uniqValues=[]){
-      const newAry = [...array];
+      const newAry = this.map(elem,id={
+        return !!cb?{[elem]:cb(elem)}:{[id]:elem}
+      })
+      newAry.forEach(elem=>console.log(elem));
       // uniqValues.push(newAry.shift());
       // for (const [id,elem] of newAry.entries()){
       //   if (this.last(uniqValues) === elem) delete newAry[id];
