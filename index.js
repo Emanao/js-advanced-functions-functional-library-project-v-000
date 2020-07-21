@@ -99,11 +99,9 @@ const fi = (function() {
       uniqValues.push(newAryOfObjs.shift());
       newAryOfObjs = this.filter(newAryOfObjs, elem=>Object.values(this.last(uniqValues))[0] !== Object.values(elem)[0] )
       console.log(newAryOfObjs)
-      // for (const elem of newAryOfObjs){
-      //    if ()  delete newAryOfObjs[id];
-      // }
-      // if(this.compact(newAry).length>0) this.uniq(this.compact(newAry),false, cb, uniqValues);
-      // return newAry;
+
+      if(newAryOfObjs.length>0) this.uniq(newAryOfObjs),false, cb, uniqValues);
+       return uniqValues;
     },
 
 
