@@ -110,7 +110,7 @@ const fi = (function() {
       console.log("Keys");
       console.log(this.map(uniqValues, elem=>Object.keys(elem)));
 
-      return !!cb? this.flatten(this.map(uniqValues, elem=>Object.keys(elem))):this.map(uniqValues, elem=>Object.values(elem));
+      return !!cb? this.flatten(this.map(uniqValues, elem=>Object.values(elem))):this.map(uniqValues, elem=>Object.keys(elem));
     },
 
 
