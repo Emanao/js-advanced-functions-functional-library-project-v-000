@@ -98,6 +98,7 @@ const fi = (function() {
       // newAryOfObj.map(elem=>Object.values(elem)))
       uniqValues.push(newAryOfObjs.shift());
       newAryOfObjs = this.filter(newAryOfObjs, elem=>Object.values(this.last(uniqValues))[0] !== Object.values(elem)[0] )
+      console.log(newAryOfObjs)
       // for (const elem of newAryOfObjs){
       //    if ()  delete newAryOfObjs[id];
       // }
