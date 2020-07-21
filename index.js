@@ -103,11 +103,9 @@ const fi = (function() {
       console.log("newAryOfObjs - Fnc entry: ");
       console.log(newAryOfObjs);
 
-
-      // newAry.forEach(elem=>console.log(elem));
-      // newAryOfObj.map(elem=>Object.values(elem)))
       uniqValues.push(newAryOfObjs.shift());
       newAryOfObjs = this.filter(newAryOfObjs, elem=>Object.values(this.last(uniqValues))[0] !== Object.values(elem)[0] )
+
       console.log("newAryOfObjs - Fnc exit");
       console.log(newAryOfObjs);
 
