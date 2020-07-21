@@ -95,8 +95,9 @@ const fi = (function() {
         return !!cb?{[elem]:cb(elem)}:{[id]:elem}
       })
       // newAry.forEach(elem=>console.log(elem));
-      console.log(newAry.shift());
+      console.log(newAry.shift().last(newAry));
       console.log(newAry);
+      newArry.reduce()
       // uniqValues.push(newAry.shift());
       // for (const [id,elem] of newAry.entries()){
       //   if (this.last(uniqValues) === elem) delete newAry[id];
