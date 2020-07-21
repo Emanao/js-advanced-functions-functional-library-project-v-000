@@ -91,17 +91,17 @@ const fi = (function() {
     },
 
     uniq: function(array, isSorted, cb, uniqValues=[]){
-      const newAry = this.map(array, (elem,id)=>{
+      const newAryOfObjs = this.map(array, (elem,id)=>{
         return !!cb?{[elem]:cb(elem)}:{[id]:elem}
       })
       // newAry.forEach(elem=>console.log(elem));
-      console.log(newAry.shift().last(newAry));
-      console.log(newAry);
-      newArry.reduce()
+      // newAryOfObj.map(elem=>Object.values(elem)))
       // uniqValues.push(newAry.shift());
-      // for (const [id,elem] of newAry.entries()){
-      //   if (this.last(uniqValues) === elem) delete newAry[id];
-      // }
+      for (const [id,elem] of newAryOfObjs.entries()){
+        console.log(id);
+        console.log(elem);
+        // if (this.last(uniqValues) === elem) delete newAry[id];
+      }
       // if(this.compact(newAry).length>0) this.uniq(this.compact(newAry),false, cb, uniqValues);
       // return newAry;
     },
