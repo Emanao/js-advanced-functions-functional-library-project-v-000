@@ -100,7 +100,8 @@ const fi = (function() {
       else{
         newAryOfObjs = array;
       }
-      console.log("newAryOfObjs - Fnc entry: "+newAryOfObjs)
+      console.log("newAryOfObjs - Fnc entry: ");
+      console.log(newAryOfObjs);
 
 
       // newAry.forEach(elem=>console.log(elem));
