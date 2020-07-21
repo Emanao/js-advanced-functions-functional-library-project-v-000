@@ -92,11 +92,12 @@ const fi = (function() {
 
     uniq: function(array, isSorted, cb, uniqValues=[]){
       let newAryOfObjs;
-      if (Array.isArray(array) {
-          newAryOfObjs = this.map(array, (elem,id)=>{
+      if(uniqValues.length === 0){
+        newAryOfObjs = this.map(array, (elem,id)=>{
           return !!cb?{[elem]:cb(elem)}:{[id]:elem}
         })
       }
+
       // newAry.forEach(elem=>console.log(elem));
       // newAryOfObj.map(elem=>Object.values(elem)))
       uniqValues.push(newAryOfObjs.shift());
@@ -104,7 +105,7 @@ const fi = (function() {
       console.log(newAryOfObjs)
 
       if(newAryOfObjs.length>0) this.uniq(newAryOfObjs,isSorted, cb, uniqValues);
-       return uniqValues;
+      return uniqValues;
     },
 
 
