@@ -108,9 +108,9 @@ const fi = (function() {
       console.log("uniqValues");
       console.log(uniqValues);
       console.log("Keys");
-      console.log(this.map(uniqValues, elem=>Object.keys(elem)));
+      console.log(this.flatten(this.map(uniqValues, elem=>Object.keys(elem))));
       console.log("Values");
-      console.log(this.map(uniqValues, elem=>Object.values(elem)));
+      console.log(this.flatten((this.map(uniqValues, elem=>Object.values(elem))));
 
 
       return !!cb? this.flatten(this.map(uniqValues, elem=>Object.values(elem))):this.map(uniqValues, elem=>Object.keys(elem));
