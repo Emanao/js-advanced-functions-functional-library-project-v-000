@@ -91,7 +91,7 @@ const fi = (function() {
     },
 
     uniq: function(array, isSorted, cb, uniqValues=[]){
-      const newAryOfObjs = this.map(array, (elem,id)=>{
+      let newAryOfObjs = this.map(array, (elem,id)=>{
         return !!cb?{[elem]:cb(elem)}:{[id]:elem}
       })
       // newAry.forEach(elem=>console.log(elem));
