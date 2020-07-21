@@ -97,6 +97,9 @@ const fi = (function() {
           return !!cb?{[elem]:cb(elem)}:{[id]:elem}
         })
       }
+      else{
+        newAryOfObjs = array;
+      }
 
       // newAry.forEach(elem=>console.log(elem));
       // newAryOfObj.map(elem=>Object.values(elem)))
