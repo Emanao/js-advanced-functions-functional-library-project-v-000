@@ -100,7 +100,8 @@ const fi = (function() {
       for (const elem of newAryOfObjs){
         console.log("last: " + Object.values(this.last(uniqValues)));
         console.log("elem: "+ Object.values(elem));
-        // if (this.last(uniqValues) === elem) delete newAry[id];
+         if (Object.values(this.last(uniqValues)) === Object.values(elem)) console.log("Deleted:" Object.values(elem))
+        //  delete newAry[id];
       }
       // if(this.compact(newAry).length>0) this.uniq(this.compact(newAry),false, cb, uniqValues);
       // return newAry;
