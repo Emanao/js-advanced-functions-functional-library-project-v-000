@@ -5,10 +5,10 @@ const fi = (function() {
     },
 
     each: function(collection, cb) {
-      const keys = Object.keys(collection);
+      const entries = Object.entries(collection);
 
-      for(const key of keys){
-        cb(collection[key],key,collection);
+      for(const [key,val] of entries){
+        cb(val,key,collection);
       }
 
       return collection;
