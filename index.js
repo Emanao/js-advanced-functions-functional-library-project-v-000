@@ -98,7 +98,7 @@ const fi = (function() {
       // newAryOfObj.map(elem=>Object.values(elem)))
       uniqValues.push(newAryOfObjs.shift());
       for (const elem of newAryOfObjs){
-        console.log("last: " + this.last(uniqValues)); 
+        console.log("last: " + this.last(uniqValues));
         console.log("elem: "+ elem);
         // if (this.last(uniqValues) === elem) delete newAry[id];
       }
