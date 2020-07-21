@@ -77,7 +77,6 @@ const fi = (function() {
       return copyOfArray.sort(function(a, b){return sortingCb(a) - sortingCb(b)});
     },
 
-<<<<<<< HEAD
     flatten: function(array, singleLevel, newAry=[], depth=1) {
       if(!!singleLevel){
         for (const elem of array){
@@ -93,36 +92,14 @@ const fi = (function() {
 
     uniq: function(array, isSorted, cb, uniqValues=[]){
       const newAry = [...array];
-      uniqValues.push(newAry.shift());
-      for (const [id,elem] of newAry.entries()){
-        if (this.last(uniqValues) === elem) delete newAry[id];
-      }
-      if(this.compact(newAry).length>0) this.uniq(this.compact(newAry),false, cb, uniqValues);
+      // uniqValues.push(newAry.shift());
+      // for (const [id,elem] of newAry.entries()){
+      //   if (this.last(uniqValues) === elem) delete newAry[id];
+      // }
+      // if(this.compact(newAry).length>0) this.uniq(this.compact(newAry),false, cb, uniqValues);
       return uniqValues;
     },
 
-=======
-    flatten: function(array, singleLevel, newAry=[]) {
-      if(!!singleLevel){
-        for (const elem of array){
-          Array.isArray(elem)? this.each(elem, nestedElem => newAry.push(nestedElem)): newAry.push(elem);
-        }
-      }else{
-        // return this.map(array.toString().split(","), str=>parseInt(str));
-        for (const elem of array){
-          Array.isArray(elem)? this.flatten(array):console.log("newAry: "+newAry.push(elem));
-        }
-        // (elem, nestedElem => newAry.push(nestedElem)): newAry.push(elem);
-      }
-      return newAry;
-
-    },
-
-    uniq: function(array, [isSorted], [callback]){
-
-    },
-
->>>>>>> b7292c26de0b86967b49bb2d7c1bb2776c762a84
 
     keys: function(obj) {
       let props = [];
