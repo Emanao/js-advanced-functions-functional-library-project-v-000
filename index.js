@@ -100,7 +100,7 @@ const fi = (function() {
       //   if (this.last(uniqValues) === elem) delete newAry[id];
       // }
       // if(this.compact(newAry).length>0) this.uniq(this.compact(newAry),false, cb, uniqValues);
-      return uniqValues;
+      return newAry;
     },
 
 
