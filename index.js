@@ -91,7 +91,6 @@ const fi = (function() {
     },
 
     uniq: function(array, isSorted, cb, uniqValues=[]){
-      console.log("Fnc entry: "+newAryOfObjs)
       let newAryOfObjs;
       if(uniqValues.length === 0){
         newAryOfObjs = this.map(array, (elem,id)=>{
@@ -101,6 +100,8 @@ const fi = (function() {
       else{
         newAryOfObjs = array;
       }
+      console.log("Fnc entry: "+newAryOfObjs)
+
 
       // newAry.forEach(elem=>console.log(elem));
       // newAryOfObj.map(elem=>Object.values(elem)))
