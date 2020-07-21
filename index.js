@@ -91,6 +91,7 @@ const fi = (function() {
     },
 
     uniq: function(array, isSorted, cb, uniqValues=[]){
+      console.log("Fnc entry: "+newAryOfObjs)
       let newAryOfObjs;
       if(uniqValues.length === 0){
         newAryOfObjs = this.map(array, (elem,id)=>{
@@ -105,7 +106,7 @@ const fi = (function() {
       // newAryOfObj.map(elem=>Object.values(elem)))
       uniqValues.push(newAryOfObjs.shift());
       newAryOfObjs = this.filter(newAryOfObjs, elem=>Object.values(this.last(uniqValues))[0] !== Object.values(elem)[0] )
-      console.log(newAryOfObjs)
+      console.log("Fnc exit: "+newAryOfObjs)
 
       if(newAryOfObjs.length>0) this.uniq(newAryOfObjs,isSorted, cb, uniqValues);
       return uniqValues;
