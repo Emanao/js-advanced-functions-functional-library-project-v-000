@@ -96,9 +96,9 @@ const fi = (function() {
       })
       // newAry.forEach(elem=>console.log(elem));
       // newAryOfObj.map(elem=>Object.values(elem)))
-      // uniqValues.push(newAry.shift());
-      for (const [id,elem] of newAryOfObjs.entries()){
-        console.log(id);
+      uniqValues.push(newAryOfObjs.shift());
+      console.log("uniqValues: "+ uniqValues);
+      for (const elem of newAryOfObjs){
         console.log(elem);
         // if (this.last(uniqValues) === elem) delete newAry[id];
       }
